@@ -1,16 +1,17 @@
-                /*-----------------------> HTML */
+                /* HTML */
 *{
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     border: border-box;
+    font-family: sans-serif ,'Ubuntu', sans-serif;
 }
 body{
     background-color: #e3e6e6;
     flex-shrink: 0;
+    min-width: 1000px;
 }
-
-                /*-----------------------> NAVBAR TOP SECTION*/
+                /* NAVBAR TOP SECTION*/
 nav{
     background-color: #0F1111;
     height: 60px;
@@ -22,12 +23,10 @@ nav{
     display: flex;
     align-items: center;
     vertical-align: middle;
-    float: left;
     height: 60px;
     flex-shrink: 0;
 }
 .nav-left-logo{
-    margin-left:10px;
     border: 1px solid transparent;
 }
 #nav-left-logo-link{
@@ -78,8 +77,7 @@ nav{
     height: 60px;
     width: 100%;
     display: flex;
-    margin: 0px 20px 0px 20px;
-    min-width: 500px;
+    margin: 0px 10px;
 }
 .nav-middle select {
     height: 40px;
@@ -107,7 +105,7 @@ nav{
     display: flex;
     align-items: center;
     vertical-align: middle;
-    background-color: #2bf1f1;
+    background-color: #ffbb55;
     border-top-right-radius:5px;
     border-bottom-right-radius: 5px;
 }
@@ -147,18 +145,20 @@ nav{
     align-items: center;
     vertical-align: middle;
 }
+#nav-right-cart-text{
+    display: none;
+}
 
-                /*-----------------------> NAVBAR BOTTOM SECTION */
-#navbottom{
+                /* NAVBAR BOTTOM SECTION */
+.navbottom{
     height: 42px;
     background-color: #222f3d;
     font-size: 13.5px;
     display: flex;
     align-items: center;
     vertical-align: middle;
-    padding: 0px 10px 0px 10px;
 }
-#navbottom a{
+.navbottom a{
     color: white;
     display: flex;
     height: 40px;
@@ -168,18 +168,22 @@ nav{
     border:1px solid transparent;
     border-radius: 0.08rem;
 }
-#navbottom a:hover{
+.navbottom a:hover{
     border:1px solid white;
 }
 
-                /*-----------------------> MAIN CONTENT SECTION */
+                /* MAIN CONTENT SECTION */
 main{
-    width: 1500px;
+    width: 100%;
+    max-width: 1500px;
     margin: auto;
 }
 img{
     display: block;
+    width: 100%;
     padding: 0px;
+    object-fit: cover;
+    object-position: center;
     margin: 0px;
 }
 .overlay{
@@ -209,10 +213,11 @@ img{
     text-decoration: underline;
 }
 
-                /*-----------------------> ITEM GRID SECTION */
+                /* ITEM GRID SECTION */
 .itemgrid{
     position: relative;
     top: -360px;
+    overflow: hidden;
 }
 .itemrow{
     display: flex;
@@ -319,7 +324,7 @@ img{
     font-weight: 00;
 }
 
-                /*-----------------------> FOOTER SECTION */
+                /* FOOTER SECTION */
 footer{
     margin-top: 20px;
 }
@@ -447,4 +452,23 @@ footer{
     font-weight: 700px;
     text-align: center;
     padding-bottom: 30px;
+}
+
+                    /* MediaQueries */
+
+@media screen and (min-width:1099px) 
+{
+    .nav-right{margin-right: 10px;}
+    .nav-left{margin-left: 10px;}
+    .navbottom{padding: 10px;}
+    .nav-middle{margin: 0px 20px;}
+}
+@media screen and (min-width:1024px)
+{
+    #nav-right-cart-text{
+        display: inline-block;
+    }
+    body{
+        object-fit: cover;
+    }
 }
